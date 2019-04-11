@@ -133,7 +133,7 @@ spec:
 
               asset.resource.data.networkInterfaces[_].accessConfigs
             
-              message := sprintf("%v violates on all resources.", [info.name])
+              message := sprintf("No external IPs are allowed.", [])
               metadata := {
                 "constraint": info,
                 "asset": asset,
