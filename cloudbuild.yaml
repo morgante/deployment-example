@@ -18,4 +18,5 @@ steps:
   dir: deployments/app1/dev
   args:
   - validate
+  - terraform.tfplan
   -  --policy-path=../../../policies/
