@@ -15,8 +15,8 @@ resource "google_compute_instance" "backend" {
   network_interface {
     subnetwork = "${data.terraform_remote_state.networking-dev.app_subnet}"
 
-    access_config {
-      // Ephemeral IP
-    }
+    # access_config {
+    #   // Ephemeral IP
+    # }
   }
 }
