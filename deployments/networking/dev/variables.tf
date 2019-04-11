@@ -1,0 +1,1 @@
+variable "host_project" {}

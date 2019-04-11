@@ -1,0 +1,7 @@
+.terraform*
+terraform.tfstate*
+.DS_Store
+# pycharm
+.idea/
+__pycache__/
+sa-key.json
