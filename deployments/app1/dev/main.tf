@@ -1,7 +1,8 @@
 resource "google_compute_instance" "backend" {
   name         = "my-test-instance"
   machine_type = "n1-standard-1"
-  zone         = "us-central1-a"
+  zone         = "us-west1-a"
+  project = "${var.app_project}"
 
   tags = ["foo", "bar"]
 
@@ -12,7 +13,7 @@ resource "google_compute_instance" "backend" {
   }
 
   network_interface {
-    network = "default"
+    subnetwork = "${data.terraform_remote_state.networking-dev.app_subnet}"
 
     access_config {
       // Ephemeral IP
