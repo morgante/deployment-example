@@ -32,3 +32,10 @@ module "vpc" {
         dev-subnet-02 = []
     }
 }
+
+module "shared-rules" {
+    source = "../../../modules/shared_fw_rules"
+
+    network = "${module.vpc.network_name}"
+    host_project = "${var.host_project}"
+}
