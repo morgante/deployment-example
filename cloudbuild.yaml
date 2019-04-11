@@ -14,3 +14,8 @@ steps:
   args:
   - convert
   - terraform.tfplan
+- name: gcr.io/devops-iac-project/terraform-validator
+  dir: deployments/app1/dev
+  args:
+  - validate
+  -  --policy-path=../../../policies/
