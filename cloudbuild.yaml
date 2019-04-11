@@ -1,0 +1,11 @@
+---
+steps:
+- name: hashicorp/terraform
+  dir: deployments/app1/dev
+  args:
+  - init
+- name: hashicorp/terraform
+  dir: deployments/app1/dev
+  args:
+  - plan
+  - -out=terraform.tfplan
