@@ -1,0 +1,11 @@
+---
+steps:
+- name: gcr.io/devops-iac-project/terraform-validator
+  dir: deployments/${_DEPLOYMENT}/${_ENV_NAME}
+  args:
+  - init
+- name: hashicorp/terraform
+  dir: deployments/${_DEPLOYMENT}/${_ENV_NAME}
+  args:
+  - plan
+  - -out=terraform.tfplan
