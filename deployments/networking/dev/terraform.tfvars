@@ -1,1 +1,1 @@
-host_project="gcp-foundation-shared-host"
+../terraform.tfvars

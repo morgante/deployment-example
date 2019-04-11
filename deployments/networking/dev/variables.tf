@@ -1,1 +1,1 @@
-variable "host_project" {}
+../variables.tf
