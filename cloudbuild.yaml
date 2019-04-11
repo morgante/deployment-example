@@ -9,3 +9,8 @@ steps:
   args:
   - plan
   - -out=terraform.tfplan
+- name: gcr.io/devops-iac-project/terraform-validator
+  dir: deployments/app1/dev
+  args:
+  - convert
+  - terraform.tfplan
