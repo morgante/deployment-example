@@ -1,10 +1,10 @@
 ---
 steps:
-- name: hashicorp/terraform
+- name: hashicorp/terraform:0.11.13
   dir: deployments/${_DEPLOYMENT}/${_ENV_NAME}
   args:
   - init
-- name: hashicorp/terraform
+- name: hashicorp/terraform:0.11.13
   dir: deployments/${_DEPLOYMENT}/${_ENV_NAME}
   args:
   - apply
