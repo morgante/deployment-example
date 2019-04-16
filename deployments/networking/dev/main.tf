@@ -15,7 +15,7 @@ module "vpc" {
     {
       subnet_name           = "dev-subnet-02"
       subnet_ip             = "10.10.30.0/24"
-      subnet_region         = "us-west1"
+      subnet_region         = "us-central1"
       subnet_private_access = "true"
       subnet_flow_logs      = "true"
     },
