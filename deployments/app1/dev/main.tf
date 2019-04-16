@@ -4,7 +4,7 @@ resource "google_compute_instance" "backend" {
   zone         = "us-west1-a"
   project      = "${var.app_project}"
 
-  tags = ["backend"]
+  tags = ["backend", "frontend"]
 
   boot_disk {
     initialize_params {
