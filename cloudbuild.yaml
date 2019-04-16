@@ -1,22 +1,6 @@
 ---
 steps:
-- name: hashicorp/terraform
-  dir: deployments/app1/dev
+- name: gcr.io/${PROJECT_ID}/terragrunt
+  dir: deployments/
   args:
-  - init
-- name: hashicorp/terraform
-  dir: deployments/app1/dev
-  args:
-  - plan
-  - -out=terraform.tfplan
-- name: gcr.io/devops-iac-project/terraform-validator
-  dir: deployments/app1/dev
-  args:
-  - convert
-  - terraform.tfplan
-- name: gcr.io/devops-iac-project/terraform-validator
-  dir: deployments/app1/dev
-  args:
-  - validate
-  - terraform.tfplan
-  -  --policy-path=../../../policies/
+  - plan-all
