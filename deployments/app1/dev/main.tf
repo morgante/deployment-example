@@ -17,13 +17,13 @@ resource "google_compute_instance" "backend" {
   }
 }
 
-resource "google_compute_instance" "backend" {
-  name         = "my-frontend-instance"
+resource "google_compute_instance" "frontend" {
+  name         = "my-front-instance"
   machine_type = "n1-standard-1"
   zone         = "us-west1-a"
   project      = "${var.app_project}"
 
-  tags = ["backend"]
+  tags = ["frontend"]
 
   boot_disk {
     initialize_params {
