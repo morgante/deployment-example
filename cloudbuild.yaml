@@ -19,4 +19,4 @@ steps:
   args:
   - validate
   - terraform.tfplan
-  -  --policy-path=../../../policies/
+  -  --policy-path=../../../policy-library/
