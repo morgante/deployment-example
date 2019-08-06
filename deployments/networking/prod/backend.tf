@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    bucket  = "gcp-clearify-terraform"
+    bucket  = "cf-tf-seed-bucket"
     prefix  = "tf-demo/state-prod/networking"
-    project = "gcp-foundation-shared-devops"
+    project = "gcp-challenge-dev"
   }
 }

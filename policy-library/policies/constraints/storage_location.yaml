@@ -13,11 +13,15 @@
 # limitations under the License.
 #
 apiVersion: constraints.gatekeeper.sh/v1alpha1
-kind: GCPComputeExternalIpAccessConstraintV1
+kind: GCPStorageLocationConstraintV1
 metadata:
-  name: forbid_external_ip
+  name: allow_some_storage_location
 spec:
   severity: high
   match:
     target: ["organization/*"]
-    exclude: [] # optional, default is no exclusions
+  parameters:
+    mode: "allowlist"
+    locations:
+      - "europe-*"
+    exemptions: []

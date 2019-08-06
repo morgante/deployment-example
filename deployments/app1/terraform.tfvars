@@ -1,1 +1,1 @@
-app_project="gcp-foundation-shared-host"
+app_project="cf-gcp-challenge-dev"

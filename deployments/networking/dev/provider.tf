@@ -1,3 +1,3 @@
 provider "google" {
-  project = "devops-iac-project"
+  project = "cf-gcp-challenge-dev"
 }
