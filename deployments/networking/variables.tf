@@ -1,1 +1,0 @@
-variable "host_project" {}
